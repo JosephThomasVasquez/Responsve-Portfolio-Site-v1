@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Portfolio Website",
   "main": "index.js",
+  "homepage": "https://Dymensi0n.github.io/Responsve-Portfolio-Site-v1",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Joseph Vasquez",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0"
   }
 }
