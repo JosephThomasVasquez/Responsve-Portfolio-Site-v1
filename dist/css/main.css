@@ -1,3 +1,9 @@
+/* Default Colors
+$primary-color: #232323;
+$secondary-color: #1ad5ee;
+$text-color: #dddddd;
+$link-color: #0088ff;
+*/
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -9,7 +15,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: white;
+    background: #dddddd;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -28,7 +34,7 @@
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
-  .menu-branding, .menu-nav {
+  .menu-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -40,23 +46,24 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #161616;
+    background: linear-gradient(90deg, #182633 0%, #00303a 100%);
     list-style: none;
-    transform: translate3d(-200%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
-      transform: translate3d(-100%, 0, 0); }
+      transform: translate3d(0, 0, 0); }
   .menu .nav-item {
     transform: translate3d(-200px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #1ad5ee; }
+      color: #00c3ff;
+      font-weight: bold; }
     .menu .nav-item .nav-link {
       display: inline-block;
       position: relative;
-      font-size: 30px;
+      font-size: 1.5rem;
       font-weight: 300;
       color: #dddddd;
       text-transform: uppercase;
@@ -64,7 +71,7 @@
       text-decoration: none;
       transition: all 0.5s ease-out; }
       .menu .nav-item .nav-link:hover {
-        color: #1ad5ee;
+        color: #00c3ff;
         transition: all 0.5s ease-out; }
   .menu .nav-item:nth-child(1) {
     transition-delay: 0.1s; }
@@ -77,11 +84,11 @@
   box-sizing: border-box; }
 
 body {
-  background: #232323;
-  color: white;
+  background: #1a2936;
+  color: #dddddd;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Dosis', sans-serif;
   line-height: 1.5; }
   body#bg-image {
     background: url(../img/Desktop_Background.jpg);
@@ -95,7 +102,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(35, 35, 35, 0.75); }
+      background: rgba(26, 41, 54, 0.75); }
 
 h1, h2, h3 {
   margin: 0;
@@ -105,7 +112,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(40, 40, 40, 0.5); }
+    background: linear-gradient(90deg, #1c2c39 0%, rgba(0, 212, 255, 0.1) 100%); }
 
 a {
   color: #dddddd;
@@ -117,20 +124,68 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #1ad5ee; }
+  color: #00c3ff; }
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      color: #dddddd;
+      background: linear-gradient(90deg, #1c2c39 0%, rgba(0, 212, 255, 0.1) 100%);
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #1ad5ee;
+        color: #00c3ff;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 10vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bio bio' 'job1 job2';
+  grid-template-columns: repeat(2, 1fr); }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job {
+    background: linear-gradient(90deg, #1c2c39 0%, rgba(0, 212, 255, 0.1) 100%);
+    padding: 0.5rem;
+    border-bottom: rgba(0, 195, 255, 0.5) 2px solid; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #090f14;
+  color: #dddddd; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show {
+      transform: translate3d(100, 0, 0); }
+  .menu-nav {
+    height: 100vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .about-info {
+    grid-template-areas: 'bio' 'job1' 'job2';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }

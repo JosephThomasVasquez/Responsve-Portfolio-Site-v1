@@ -1,7 +1,13 @@
+/* Default Colors
 $primary-color: #232323;
 $secondary-color: #1ad5ee;
 $text-color: #dddddd;
 $link-color: #0088ff;
+*/
+$primary-color: #1a2936;
+$secondary-color: #00c3ff;
+$text-color: #dddddd;
+$link-color: #ff0000;
 $show-home-image: true;
 $home-image: url(../img/Desktop_Background.jpg);
 $background-opacity: 0.75;
@@ -29,5 +35,40 @@ $background-opacity: 0.75;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+// Text Color Mixin
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #121212;
+
+    }@else {
+        @return #dddddd;
+    }
+}
+
+// Media Query Mixins
+@mixin mediaSml {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMed {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLrg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXL {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }
