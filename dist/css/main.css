@@ -171,6 +171,25 @@ main {
       border-color: #00c3ff;
       transition: all 0.5s ease-out; }
 
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .contact-container div {
+    font-size: 2rem;
+    border: 3px white solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .contact-container div:hover {
+      padding: 0.5rem 1.5rem;
+      background: rgba(0, 195, 255, 0.5);
+      color: #dddddd; }
+      .contact-container div:hover span {
+        color: #dddddd; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
