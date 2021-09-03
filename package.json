@@ -1,17 +1,24 @@
 {
-  "name": "portfolio-project",
+  "name": "Responsve-Portfolio-Site-v1",
   "version": "1.0.0",
-  "description": "Portfolio Website",
+  "description": "",
   "main": "index.js",
-  "homepage": "https://Dymensi0n.github.io/Responsve-Portfolio-Site-v1",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Joseph Vasquez",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephThomasVasquez/Responsve-Portfolio-Site-v1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosephThomasVasquez/Responsve-Portfolio-Site-v1/issues"
+  },
+  "homepage": "https://github.com/JosephThomasVasquez/Responsve-Portfolio-Site-v1#readme",
   "dependencies": {
-    "gh-pages": "^2.1.1",
-    "node-sass": "^4.13.0"
+    "gh-pages": "^3.2.3",
+    "node-sass": "^6.0.1"
   }
 }
