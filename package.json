@@ -19,6 +19,6 @@
   "homepage": "https://github.com/JosephThomasVasquez/Responsve-Portfolio-Site-v1#readme",
   "dependencies": {
     "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   }
 }
